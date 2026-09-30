@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /404.html
+
+Sitemap: https://climatechvalle.com/sitemap.xml

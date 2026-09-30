@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <defs>
+    <linearGradient id="frostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="windGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark Icon -->
+  <g transform="translate(6, 6)">
+    <!-- Rounded Emblem Background Container -->
+    <rect width="48" height="48" rx="14" fill="#006494" fill-opacity="0.08"/>
+    
+    <!-- Snowflake & Cooling Breeze Emblem -->
+    <!-- Left Snowflake Core -->
+    <path d="M24 10 V38" stroke="url(#frostGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M12 17 L36 31" stroke="url(#frostGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M12 31 L36 17" stroke="url(#frostGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Snowflake Crystal Branches (Left Half) -->
+    <path d="M24 15 L18 12" stroke="url(#frostGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M24 33 L18 36" stroke="url(#frostGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M16 19 L15 13" stroke="url(#frostGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M16 29 L15 35" stroke="url(#frostGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M14 24 L8 24" stroke="url(#frostGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Dynamic Flowing Wind Swirls (Right Half) -->
+    <path d="M20 20 C27 16, 35 17, 39 21 C42 24, 40 28, 36 27 C32 26, 33 22, 36 21" stroke="url(#windGrad)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <path d="M18 26 C26 23, 34 25, 42 29 C45 31, 44 35, 40 35 C36 35, 36 31, 40 30" stroke="url(#windGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M22 32 C28 32, 34 33, 38 37 C40 39, 39 41, 36 41 C33 41, 33 38, 36 37" stroke="url(#windGrad)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+    <!-- Center Tech Node -->
+    <circle cx="24" cy="24" r="3.2" fill="#006494"/>
+    <circle cx="24" cy="24" r="1.5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Typography: ClimaTech Valle -->
+  <g transform="translate(62, 16)">
+    <!-- CLIMATECH -->
+    <text x="0" y="17" font-family="Plus Jakarta Sans, Montserrat, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="currentColor">
+      CLIMA<tspan fill="#00a896">TECH</tspan>
+    </text>
+    
+    <!-- VALLE & SUBTITLE -->
+    <text x="0" y="32" font-family="Plus Jakarta Sans, Montserrat, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="0.16em" fill="#00a896">
+      VALLE <tspan fill="#64748b" font-weight="600" letter-spacing="0.08em">· CLIMATIZACIÓN</tspan>
+    </text>
+  </g>
+</svg>
