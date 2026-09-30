@@ -62,7 +62,7 @@ function updateAllWhatsAppLinks() {
 
   const floatingWa = document.getElementById('floating-wa-btn');
   if (floatingWa) {
-    floatingWa.href = getWhatsAppUrl(`Hola ${CONFIG.companyName}, deseo cotizar un servicio de aire acondicionado en Buga.`);
+    floatingWa.href = getWhatsAppUrl(`Hola ${CONFIG.companyName}, deseo cotizar un servicio de aire acondicionado.`);
   }
 }
 
