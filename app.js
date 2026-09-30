@@ -21,13 +21,11 @@ function getWhatsAppUrl(customMessage) {
 
 // Inicialización de la aplicación
 document.addEventListener('DOMContentLoaded', () => {
-  initMobileMenu();
   initCalculator();
   initGallery();
   initContactForm();
   initCatalogButtons();
   initWhatsAppFloating();
-  initPhoneConfigModal();
   updateAllWhatsAppLinks();
 });
 
@@ -76,31 +74,6 @@ function formatPhoneNumber(num) {
     return `+57 (${cleaned.substring(0, 3)}) ${cleaned.substring(3, 6)}-${cleaned.substring(6)}`;
   }
   return '+' + cleaned;
-}
-
-// Mobile Menu Drawer
-function initMobileMenu() {
-  const toggleBtn = document.getElementById('mobile-menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const closeBtn = document.getElementById('mobile-menu-close');
-  const menuLinks = document.querySelectorAll('.mobile-nav-link');
-
-  if (!toggleBtn || !menu) return;
-
-  const toggle = () => {
-    menu.classList.toggle('hidden');
-    document.body.classList.toggle('overflow-hidden');
-  };
-
-  toggleBtn.addEventListener('click', toggle);
-  if (closeBtn) closeBtn.addEventListener('click', toggle);
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    });
-  });
 }
 
 // Calculadora de BTU & Cotizador
@@ -318,41 +291,5 @@ function initWhatsAppFloating() {
         tooltip.classList.add('opacity-0', 'translate-y-2');
       });
     }
-  }
-}
-
-// Modal para configurar o cambiar el número de WhatsApp fácilmente
-function initPhoneConfigModal() {
-  const configBtn = document.getElementById('open-config-btn');
-  const modal = document.getElementById('config-modal');
-  const closeBtn = document.getElementById('close-config-modal');
-  const saveBtn = document.getElementById('save-config-btn');
-  const phoneInput = document.getElementById('config-phone-input');
-
-  if (!configBtn || !modal) return;
-
-  configBtn.addEventListener('click', () => {
-    if (phoneInput) phoneInput.value = CONFIG.whatsappNumber;
-    modal.classList.remove('hidden');
-  });
-
-  const closeModal = () => modal.classList.add('hidden');
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  if (saveBtn && phoneInput) {
-    saveBtn.addEventListener('click', () => {
-      const val = phoneInput.value.replace(/[^0-9]/g, '');
-      if (val.length >= 8) {
-        CONFIG.whatsappNumber = val;
-        localStorage.setItem('climatech_whatsapp', val);
-        updateAllWhatsAppLinks();
-        initCalculator();
-        initCatalogButtons();
-        closeModal();
-        alert(`¡Número de WhatsApp actualizado con éxito a: +${val}! Todos los botones ahora enlazan a este número.`);
-      } else {
-        alert('Por favor introduce un número válido con código de país (ejemplo: 573239421252).');
-      }
-    });
   }
 }
